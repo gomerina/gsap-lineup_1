@@ -4,7 +4,9 @@ $(document).ready(function () {
             window.scrollTo(0, 0);
         }
     }
-
+    Splitting();
+    const images = document.querySelectorAll(".jsParallaxImg")
+    new Ukiyo(images)
     gsap.registerPlugin(ScrollTrigger, ScrollSmoother)
     ScrollTrigger.normalizeScroll(true)
 
@@ -113,7 +115,7 @@ $(document).ready(function () {
         },
 
     })
-    Splitting();
+
 
     var textArray = gsap.utils.toArray('h2')
     var advArray = gsap.utils.toArray('.main-advantages__item');
@@ -151,6 +153,5 @@ $(document).ready(function () {
 
 
 
-    const images = document.querySelectorAll(".jsParallaxImg")
-    new Ukiyo(images)
+
 })
