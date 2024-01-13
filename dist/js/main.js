@@ -255,12 +255,13 @@ $(document).ready(function () {
 
     })
     gsap.to('.main-animation__img img', {
-        y: -200,
+        y: -220,
         ease: 'power2.inOut',
         scrollTrigger: {
             trigger: '.main-wrapper',
-            end: () => '+=100%',
+            end: () => '+=103%',
             scrub: 1,
+            markers: true,
         },
 
     })
