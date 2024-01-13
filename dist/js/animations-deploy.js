@@ -40,8 +40,8 @@ $(document).ready(function () {
     gsap.to('.main-animation__img', {
         //clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)',
         ease: 'power2.inOut',
-        rotation: 0,
         scale: 1,
+        opacity: 1,
         scrollTrigger: {
             trigger: '.main-animation',
             start: 'top top',
