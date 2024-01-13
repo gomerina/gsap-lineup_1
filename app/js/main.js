@@ -198,7 +198,7 @@ $(document).ready(function () {
         ease: 'power2.inOut',
         scrollTrigger: {
             start: 'top top',
-            end: () => '+=200%',
+            end: () => '+=100%',
             scrub: 1,
         },
 
@@ -209,7 +209,7 @@ $(document).ready(function () {
         ease: 'power2.inOut',
         scrollTrigger: {
             start: 'top top',
-            end: () => '+=200%',
+            end: () => '+=100%',
             scrub: 1,
         },
 
@@ -222,7 +222,7 @@ $(document).ready(function () {
         scrollTrigger: {
             trigger: '.main-animation',
             start: 'top top',
-            end: () => '+=200%',
+            end: () => '+=100%',
             scrub: 1,
             pin: true,
             scrub: true,
@@ -242,7 +242,7 @@ $(document).ready(function () {
         scale: 1,
         scrollTrigger: {
             start: 'top top',
-            end: () => '+=200%',
+            end: () => '+=100%',
             scrub: 1,
         },
 
@@ -255,7 +255,7 @@ $(document).ready(function () {
         scrollTrigger: {
 
             start: 'top top',
-            end: () => '+=200%',
+            end: () => '+=100%',
             //markers: true,
             scrub: true,
         },
