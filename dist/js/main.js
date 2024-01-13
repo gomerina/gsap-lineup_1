@@ -190,7 +190,8 @@ $(document).ready(function () {
     let smoother = ScrollSmoother.create({
         smooth: 1.3,
         effects: true,
-        normalizeScroll: true
+        normalizeScroll: true,
+        ignoreMobileResize: true,
     });
     gsap.to('.first-letter', {
         x: -innerWidth * 3,
