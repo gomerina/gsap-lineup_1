@@ -576,7 +576,7 @@ h1 {
   position: absolute;
   top: 0;
   left: -50vw;
-  background: #EDE5DE;
+  background: rgba(237, 229, 222, 0.7);
 }
 
 .main-animation__text {

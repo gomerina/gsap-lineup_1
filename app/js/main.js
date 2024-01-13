@@ -178,6 +178,83 @@ $(document).ready(function () {
     $grid.imagesLoaded().progress(function () {
         $grid.masonry('layout');
     });
+
+    window.onbeforeunload = function () {
+        if ('#forceScroll') {
+            window.scrollTo(0, 0);
+        }
+    }
+    gsap.registerPlugin(ScrollTrigger)
+
+    gsap.to('.first-letter', {
+        x: -innerWidth * 3,
+        scale: 10,
+        ease: 'power2.inOut',
+        scrollTrigger: {
+            start: 'top top',
+            end: () => '+=200%',
+            scrub: 1,
+        },
+
+    })
+    gsap.to('.last-letter', {
+        x: innerWidth * 3,
+        scale: 10,
+        ease: 'power2.inOut',
+        scrollTrigger: {
+            start: 'top top',
+            end: () => '+=200%',
+            scrub: 1,
+        },
+
+    })
+
+    gsap.to('.main-animation__img', {
+        clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)',
+        ease: 'power2.inOut',
+        rotation: 0,
+        scrollTrigger: {
+            trigger: '.main-animation',
+            start: 'top top',
+            end: () => '+=200%',
+            scrub: 1,
+            pin: true,
+            scrub: true,
+            onUpdate: function (self) {
+                if (self.progress >= 0.8) {
+                    $('.header-box').addClass('active');
+                } else {
+                    $('.header-box').removeClass('active');
+                }
+            }
+        },
+
+
+    })
+    gsap.to('.main-animation__img img', {
+        ease: 'power2.inOut',
+        scale: 1,
+        scrollTrigger: {
+            start: 'top top',
+            end: () => '+=200%',
+            scrub: 1,
+        },
+
+    })
+    gsap.to('.main-animation__content', {
+        ease: 'power2.inOut',
+        opacity: 1,
+        x: 0,
+        y: 0,
+        scrollTrigger: {
+
+            start: 'top top',
+            end: () => '+=200%',
+            //markers: true,
+            scrub: true,
+        },
+
+    })
     $.fancybox.defaults.backFocus = false;
     $('.jsBodyItem').first().addClass('hidden');
     $('.content-box table').wrap('<div class="table-wrap"></div>')
