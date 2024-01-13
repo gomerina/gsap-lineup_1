@@ -656,6 +656,10 @@ h1 {
   background: rgba(237, 229, 222, 0.7);
 }
 
+#hasGSAP .main-screen {
+  display: none;
+}
+
 .main-animation__text {
   font-size: 13.5vw;
   position: absolute;
@@ -3115,6 +3119,12 @@ h1 {
 @media screen and (max-width: 1024px) {
   .container {
     padding: 0 15px;
+  }
+  #hasGSAP .main-animation {
+    display: none;
+  }
+  #hasGSAP .main-screen {
+    display: block;
   }
   .header {
     font-size: 16px;
