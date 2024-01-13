@@ -261,7 +261,6 @@ $(document).ready(function () {
             trigger: '.main-wrapper',
             end: () => '+=103%',
             scrub: 1,
-            markers: true,
         },
 
     })
