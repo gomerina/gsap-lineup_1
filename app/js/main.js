@@ -233,6 +233,11 @@ $(document).ready(function () {
                 } else {
                     $('.header-box').removeClass('active');
                 }
+                if (self.progress >= 0.01) {
+                    $('.scroll__info').addClass('hidden');
+                } else {
+                    $('.scroll__info').removeClass('hidden');
+                }
             }
         },
 
@@ -241,8 +246,19 @@ $(document).ready(function () {
     gsap.to('.main-animation__img img', {
         ease: 'power2.inOut',
         scale: 1,
+        objectPosition: '50% 50%',
         scrollTrigger: {
             start: 'top top',
+            end: () => '+=100%',
+            scrub: 1,
+        },
+
+    })
+    gsap.to('.main-animation__img img', {
+        y: -200,
+        ease: 'power2.inOut',
+        scrollTrigger: {
+            trigger: '.main-wrapper',
             end: () => '+=100%',
             scrub: 1,
         },

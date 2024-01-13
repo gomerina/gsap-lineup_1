@@ -13,7 +13,9 @@ html(lang="ru")#forceScroll
                 #smooth-content
                     .main-animation 
                         .main-animation__img
-                            img(src="img/animation-pic.jpg", alt="")
+                            picture 
+                                source(srcset="img/webp/animation-pic.webp", type="image/webp")
+                                img(src="img/animation-pic.jpg", alt="")
                             .main-animation__content 
                                 .div
                                     .container 
@@ -27,6 +29,9 @@ html(lang="ru")#forceScroll
                                                         <path d="M51.3536 39.3536C51.5488 39.1583 51.5488 38.8417 51.3536 38.6464L48.1716 35.4645C47.9763 35.2692 47.6597 35.2692 47.4645 35.4645C47.2692 35.6597 47.2692 35.9763 47.4645 36.1716L50.2929 39L47.4645 41.8284C47.2692 42.0237 47.2692 42.3403 47.4645 42.5355C47.6597 42.7308 47.9763 42.7308 48.1716 42.5355L51.3536 39.3536ZM20 39.5H51V38.5H20V39.5Z" fill="black"/>
                                                         <path d="M0.662109 25C6.23642 10.9415 19.9573 1 36.0001 1C56.9869 1 74.0001 18.0132 74.0001 39C74.0001 59.9868 56.9869 77 36.0001 77C19.9573 77 6.23642 67.0585 0.662109 53" stroke="black"/>
                                                     </svg> 
+                        .scroll__info
+                            span Scroll
+                            .scroll-arrow
                         
                         .main-animation__text 
                             span.first-letter Design 
