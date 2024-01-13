@@ -60,7 +60,7 @@ html(lang="ru")#forceScroll
                         .main-advantages 
                             .container 
                                 .main-advantages__content 
-                                    h2 Почему стоит сделать заказ в <b>DESIGN.VAGNER</b>
+                                    h2(data-splitting) Почему стоит сделать заказ в <b>DESIGN.VAGNER</b>
                                     .main-advantages__box 
                                         .main-advantages__item 
                                             .main-advantages__icon 
@@ -82,13 +82,13 @@ html(lang="ru")#forceScroll
                             .main-advantages__img 
                                 picture 
                                     source(srcset="img/webp/ma@x2.webp" type="image/webp")
-                                    img(src="img/ma@x2.png", alt="")
+                                    img(src="img/ma@x2.png", alt="").jsParallaxImg
 
                         .main-projects 
                             .main-projects__top 
                                 .container 
                                     .main-projects__heading 
-                                        h2 Проекты #[br] <b>DESIGN.VAGNER</b>
+                                        h2(data-splitting) Проекты #[br] <b>DESIGN.VAGNER</b>
                                 .main-project__wrapper
                                     .main-projects__slider.swiper 
                                         .swiper-wrapper 
@@ -212,7 +212,7 @@ html(lang="ru")#forceScroll
                         .main-blog__wrapper 
                             .main-blog 
                                 .container 
-                                    h2 Блог #[br] <b>DESIGN.VAGNER</b>
+                                    h2(data-splitting) Блог #[br] <b>DESIGN.VAGNER</b>
                                     .blog-slider__wrapper 
                                         .blog-slider.swiper 
                                             .swiper-wrapper
@@ -300,6 +300,35 @@ html(lang="ru")#forceScroll
                                                     <path d="M0.662109 25C6.23642 10.9415 19.9573 1 36.0001 1C56.9869 1 74.0001 18.0132 74.0001 39C74.0001 59.9868 56.9869 77 36.0001 77C19.9573 77 6.23642 67.0585 0.662109 53" stroke="black"/>
                                                 </svg> 
                         
-                        include includes/blocks/feedback
+                        .feedback 
+                            .container 
+                                .centered-heading 
+                                    h2(data-splitting) Хочу проект в  Design.vagner
+                                    .subheading.feedback__subheading Оставьте заявку, мы вам перезвоним в течение 24 часов
+                                .feedback-form__box
+                                    form(action="#")
+                                        .feedback-fields__group 
+                                            .feedback-field__item.error 
+                                                p.feedback-field__name Ваше имя
+                                                input(type="text").form__input
+                                                .error-icon 
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16" fill="none">
+                                                        <line x1="1.35355" y1="0.646447" x2="16.3536" y2="15.6464" stroke="#EC0000"/>
+                                                        <line y1="-0.5" x2="21.2132" y2="-0.5" transform="matrix(-0.707107 0.707107 0.707107 0.707107 16 1)" stroke="#EC0000"/>
+                                                    </svg>
+                                            .feedback-field__item 
+                                                p.feedback-field__name Телефон
+                                                input(type="tel").form__input
+                                                .error-icon 
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16" fill="none">
+                                                        <line x1="1.35355" y1="0.646447" x2="16.3536" y2="15.6464" stroke="#EC0000"/>
+                                                        <line y1="-0.5" x2="21.2132" y2="-0.5" transform="matrix(-0.707107 0.707107 0.707107 0.707107 16 1)" stroke="#EC0000"/>
+                                                    </svg>
+                                        .feedback-bottom 
+                                            label.control.control-checkbox
+                                                span Я даю согласие на обработку моих персональных данных согласно <a href="#"><ins>политике конфиденциальности</ins></a>
+                                                input(type="checkbox")
+                                                span.control_indicator
+                                            button.btn.large Отправить заявку
                     
                     include includes/footer
