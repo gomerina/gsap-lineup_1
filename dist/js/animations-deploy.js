@@ -6,6 +6,13 @@ $(document).ready(function () {
     }
     Splitting();
     const images = document.querySelectorAll(".jsParallaxImg")
+    const mainParallax = document.querySelector(".jsMainParallaxImg")
+    new Ukiyo(mainParallax, {
+        scale: 1.2,
+        speed: 3,
+        willChange: true,
+        externalRAF: false
+    })
     new Ukiyo(images)
     gsap.registerPlugin(ScrollTrigger, ScrollSmoother)
     ScrollTrigger.normalizeScroll(true)
@@ -68,17 +75,17 @@ $(document).ready(function () {
 
 
     })
-    gsap.to('.main-animation__img img', {
-        ease: 'power2.inOut',
-        scale: 1,
-        objectPosition: '50% 50%',
-        scrollTrigger: {
-            start: 'top top',
-            end: () => '+=100%',
-            scrub: 1,
-        },
+    //gsap.to('.main-animation__img img', {
+    //    ease: 'power2.inOut',
+    //    scale: 1,
+    //    objectPosition: '50% 50%',
+    //    scrollTrigger: {
+    //        start: 'top top',
+    //        end: () => '+=100%',
+    //        scrub: 1,
+    //    },
 
-    })
+    //})
     gsap.to('.main-animation__img img', {
         y: -220,
         ease: 'power2.inOut',

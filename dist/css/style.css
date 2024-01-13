@@ -615,12 +615,6 @@ h1 {
   height: 100%;
   -o-object-fit: cover;
   object-fit: cover;
-  -o-object-position: -20% -60%;
-  object-position: -20% -60%;
-  position: relative;
-  -webkit-transform: scale(1.5);
-  -ms-transform: scale(1.5);
-  transform: scale(1.5);
 }
 
 .main-animation__content {
