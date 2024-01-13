@@ -1,8 +1,10 @@
 $(document).ready(function () {
 
     Splitting();
-    const images = document.querySelectorAll(".jsParallaxImg")
-    const mainParallax = document.querySelector(".jsMainParallaxImg")
+    var images = document.querySelectorAll(".jsParallaxImg")
+    var mainParallax = document.querySelector(".jsMainParallaxImg")
+
+
     new Ukiyo(mainParallax, {
         scale: 1.2,
         speed: 3,
@@ -10,15 +12,18 @@ $(document).ready(function () {
         externalRAF: false
     })
     new Ukiyo(images)
+
+
     gsap.registerPlugin(ScrollTrigger, ScrollSmoother)
     ScrollTrigger.normalizeScroll(true)
-
     ScrollSmoother.create({
         smooth: 2,
         effects: true,
         normalizeScroll: true,
         ignoreMobileResize: true,
     });
+
+
 
     gsap.to('.first-letter', {
         x: -innerWidth * 3,
@@ -29,7 +34,6 @@ $(document).ready(function () {
             end: () => '+=100%',
             scrub: 1,
         },
-
     })
     gsap.to('.last-letter', {
         x: innerWidth * 3,
@@ -43,7 +47,6 @@ $(document).ready(function () {
 
     })
     gsap.to('.main-animation__img', {
-        //clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)',
         ease: 'power2.inOut',
         scale: 1,
         opacity: 1,
@@ -68,26 +71,19 @@ $(document).ready(function () {
 
             }
         },
-
-
     })
-
-
     gsap.to('.main-animation__content', {
         ease: 'power2.inOut',
         opacity: 1,
         x: 0,
         y: 0,
         scrollTrigger: {
-
             start: 'top top',
             end: () => '+=100%',
-            //markers: true,
             scrub: true,
         },
 
     })
-
     gsap.to('.main-advantages__img', {
         ease: 'power2.inOut',
         y: -300,
@@ -103,7 +99,6 @@ $(document).ready(function () {
 
     var textArray = gsap.utils.toArray('h2')
     var advArray = gsap.utils.toArray('.main-advantages__item');
-
     textArray.forEach(function (item) {
         var splitSymbol = item.querySelectorAll('.char');
         var tl = gsap.timeline({
@@ -134,8 +129,4 @@ $(document).ready(function () {
             ease: 'back.out',
         })
     })
-
-
-
-
 })
