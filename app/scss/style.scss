@@ -500,6 +500,7 @@ h1 {
     position: fixed;
     top: 0;
     left: 0;
+    transform: translateY(-120px);
     width: 100%;
     transition: .3s ease-in-out;
     z-index: 50;
@@ -507,6 +508,7 @@ h1 {
     &.active {
         opacity: 1;
         visibility: visible;
+        transform: translateY(0);
     }
 }
 
