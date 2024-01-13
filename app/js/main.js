@@ -188,7 +188,7 @@ $(document).ready(function () {
     ScrollTrigger.normalizeScroll(true)
 
     let smoother = ScrollSmoother.create({
-        smooth: 2,
+        smooth: 1.3,
         effects: true,
         normalizeScroll: true
     });
