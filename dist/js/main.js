@@ -184,8 +184,14 @@ $(document).ready(function () {
             window.scrollTo(0, 0);
         }
     }
-    gsap.registerPlugin(ScrollTrigger)
+    gsap.registerPlugin(ScrollTrigger, ScrollSmoother)
+    ScrollTrigger.normalizeScroll(true)
 
+    let smoother = ScrollSmoother.create({
+        smooth: 2,
+        effects: true,
+        normalizeScroll: true
+    });
     gsap.to('.first-letter', {
         x: -innerWidth * 3,
         scale: 10,
