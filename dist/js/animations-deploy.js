@@ -1,9 +1,5 @@
 $(document).ready(function () {
-    window.onbeforeunload = function () {
-        if ('#forceScroll') {
-            window.scrollTo(0, 0);
-        }
-    }
+
     Splitting();
     const images = document.querySelectorAll(".jsParallaxImg")
     const mainParallax = document.querySelector(".jsMainParallaxImg")
@@ -75,27 +71,8 @@ $(document).ready(function () {
 
 
     })
-    //gsap.to('.main-animation__img img', {
-    //    ease: 'power2.inOut',
-    //    scale: 1,
-    //    objectPosition: '50% 50%',
-    //    scrollTrigger: {
-    //        start: 'top top',
-    //        end: () => '+=100%',
-    //        scrub: 1,
-    //    },
 
-    //})
-    gsap.to('.main-animation__img img', {
-        y: -220,
-        ease: 'power2.inOut',
-        scrollTrigger: {
-            trigger: '.main-wrapper',
-            end: () => '+=103%',
-            scrub: 1,
-        },
 
-    })
     gsap.to('.main-animation__content', {
         ease: 'power2.inOut',
         opacity: 1,
