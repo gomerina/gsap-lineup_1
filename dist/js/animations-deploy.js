@@ -46,6 +46,7 @@ $(document).ready(function () {
         },
 
     })
+
     gsap.to('.main-animation__img', {
         ease: 'power2.inOut',
         scale: 1,
@@ -60,6 +61,7 @@ $(document).ready(function () {
             onUpdate: function (self) {
                 if (self.progress >= 0.8) {
                     $('.header-box').addClass('active');
+
                 } else {
                     $('.header-box').removeClass('active');
                 }

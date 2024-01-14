@@ -523,6 +523,65 @@ h1 {
   position: relative;
 }
 
+.header-box .header__logo {
+  opacity: 0;
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+  -webkit-transition: 0.6s ease-in-out;
+  transition: 0.6s ease-in-out;
+}
+.header-box.active .header__logo {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+.header-box.active .header-right {
+  opacity: 1;
+}
+.header-box.active .header-menu__item {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+  -ms-transform: translateY(0);
+  transform: translateY(0);
+}
+.header-box .header-menu__item {
+  opacity: 0;
+  -webkit-transform: translateY(20px);
+  -ms-transform: translateY(20px);
+  transform: translateY(20px);
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+.header-box .header-menu__item:first-child {
+  -webkit-transition-delay: 0.15s;
+  transition-delay: 0.15s;
+}
+.header-box .header-menu__item:nth-child(2) {
+  -webkit-transition-delay: 0.3s;
+  transition-delay: 0.3s;
+}
+.header-box .header-menu__item:nth-child(3) {
+  -webkit-transition-delay: 0.45s;
+  transition-delay: 0.45s;
+}
+.header-box .header-menu__item:nth-child(4) {
+  -webkit-transition-delay: 0.6s;
+  transition-delay: 0.6s;
+}
+.header-box .header-menu__item:nth-child(5) {
+  -webkit-transition-delay: 0.75s;
+  transition-delay: 0.75s;
+}
+.header-box .header-right {
+  opacity: 0;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  -webkit-transition-delay: 1.2s;
+  transition-delay: 1.2s;
+}
+
 .scroll__info {
   width: 60px;
   height: 80px;
@@ -1115,6 +1174,10 @@ h1 {
   position: static;
   margin: 17px 0 0 0;
 }
+.blog-slider .swiper-wrapper {
+  -webkit-transition-timing-function: linear;
+  transition-timing-function: linear;
+}
 
 .main-blog {
   overflow: hidden;
@@ -1136,9 +1199,7 @@ h1 {
   position: absolute;
   top: 548px;
   right: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;

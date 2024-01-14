@@ -131,14 +131,32 @@ $(document).ready(function () {
         spaceBetween: 20,
         slidesPerView: "auto",
         slidesPerGroup: 1,
-        speed: 600,
+        speed: 2200,
         //autoHeight: true,
-        navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
+        autoplay: {
+            delay: 0,
+            disableOnInteraction: true,
         },
+        loop: true,
+        grabCursor: true,
+        centeredSlides: true,
+        //navigation: {
+        //    nextEl: ".swiper-button-next",
+        //    prevEl: ".swiper-button-prev",
+        //},
         pagination: {
             el: ".swiper-pagination",
+        },
+        on: {
+            init() {
+                this.el.addEventListener('mouseenter', () => {
+                    this.autoplay.stop();
+                });
+
+                this.el.addEventListener('mouseleave', () => {
+                    this.autoplay.start();
+                });
+            }
         },
     });
     var reviewsSlider = new Swiper(".reviews-slider", {
