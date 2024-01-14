@@ -131,19 +131,18 @@ $(document).ready(function () {
         spaceBetween: 20,
         slidesPerView: "auto",
         slidesPerGroup: 1,
-        speed: 2200,
+        speed: 2000,
         //autoHeight: true,
         autoplay: {
             delay: 0,
-            disableOnInteraction: true,
         },
         loop: true,
+        disableOnInteraction: true,
         grabCursor: true,
-        centeredSlides: true,
-        //navigation: {
-        //    nextEl: ".swiper-button-next",
-        //    prevEl: ".swiper-button-prev",
-        //},
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
         pagination: {
             el: ".swiper-pagination",
         },

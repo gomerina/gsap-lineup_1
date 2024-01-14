@@ -109,11 +109,13 @@ $(document).ready(function () {
                 start: 'top 80%',
                 end: '100% 100%',
                 toggleActions: 'play none none none',
+
             }
         })
         tl.from(splitSymbol, 1, {
             opacity: 0,
             stagger: 0.04,
+            duration: .3,
             ease: 'back.out',
         })
     })
